@@ -1,0 +1,65 @@
+import * as React from "react" import * as ReactDOM from "react-dom/client"
+import * as Framer from "framer" window.__framer_importFromPackage =
+(packageAndFilename, exportIdentifier) => () => { return
+React.createElement(Framer.ErrorPlaceholder, { error: 'Package component not
+supported: "' + exportIdentifier + '" in "' + packageAndFilename + '"' }) } // A
+lot of libraries assume process.env.NODE_ENV is present in runtime/buildtime, so
+we are polyfilling it window.process = { ...window.process, env: {
+...(window.process ? window.process.env: undefined), NODE_ENV: "production" } }
+// Fallback support for stack gaps Framer.installFlexboxGapWorkaroundIfNeeded()
+;(async () => { const routes = {aJhphaGWP: {elements: {}, page: Framer.lazy(()
+=>
+import("https://framerusercontent.com/modules/zD3uwtFO1EeO4lkEX2mg/QgWTsJIVhJInsLNXRn73/aJhphaGWP.js")),
+path: "/blog"}, augiA20Il: {elements: {}, page: Framer.lazy(() =>
+import("https://framerusercontent.com/modules/pZrBPmkz46Q7TiyiDzB8/Riycgg0c6wCrN9Dmh0cm/augiA20Il.js")),
+path: "/"}, bO4CfmM38: {elements: {}, page: Framer.lazy(() =>
+import("https://framerusercontent.com/modules/mJnjPbAGNIYGpVrHDg1H/qBqjGnlFfcjQUMLAVHaj/bO4CfmM38.js")),
+path: "/about-me"}, d3tmJ4GhL: {elements: {}, page: Framer.lazy(() =>
+import("https://framerusercontent.com/modules/3z18bf1yyRfAPw7ltJ8J/74AMHBNZ470vr9E2PfMd/d3tmJ4GhL.js")),
+path: "/blog/:WCZZQoemL"}, ePaS6BNKI: {elements: {}, page: Framer.lazy(() =>
+import("https://framerusercontent.com/modules/oPV6Jr6u9vVU3MzdFZ1e/weYTjYYMKMn8ocL8d4eW/ePaS6BNKI.js")),
+path: "/page"}, g1kyrq6a3: {elements: {}, page: Framer.lazy(() =>
+import("https://framerusercontent.com/modules/vvzRsatS0eXOkwzYWgKk/chwgXNT5TqpSCqrgwvg8/g1kyrq6a3.js")),
+path: "/components"}, iVQpW4Cp8: {elements: {}, page: Framer.lazy(() =>
+import("https://framerusercontent.com/modules/7fXDorlKkkYuCEIkRc8v/Gk0WDJ8D6Je3Zg5WF3AC/iVQpW4Cp8.js")),
+path: "/styleguide"}, JcDOkcv0f: {elements: {}, page: Framer.lazy(() =>
+import("https://framerusercontent.com/modules/1ydVZQDSz97n7ivFkE1x/quBit2JJFykYQovp8CHZ/JcDOkcv0f.js")),
+path: "/delete-pls"}, MCAKHP08Z: {elements: {}, page: Framer.lazy(() =>
+import("https://framerusercontent.com/modules/jLV8nN5bTVGtusr36oqD/iHguUcM7Kdt75ZITr3AV/MCAKHP08Z.js")),
+path: "/archived"}, orgPRI8Ry: {elements: {}, page: Framer.lazy(() =>
+import("https://framerusercontent.com/modules/jEJiSrxyUIRDTSkq3Sns/TcBsZz0CebeAuqrBqrUB/orgPRI8Ry.js")),
+path: "/hiring"}, uzA2KUMeW: {elements: {}, page: Framer.lazy(() =>
+import("https://framerusercontent.com/modules/d5t9bZjbpTWn3X8iI3pW/naPyfs9ixkJImZCLMDny/uzA2KUMeW.js")),
+path: "/design-process"}, xE_6t4Zt8: {elements: {}, page: Framer.lazy(() =>
+import("https://framerusercontent.com/modules/aeuG04BZ5y1J0vJPOx53/29j67clqEmxRuwOcljXl/xE_6t4Zt8.js")),
+path: "/404"}} const notFoundPage = Framer.lazy(() =>
+import("https://framerusercontent.com/modules/aeuG04BZ5y1J0vJPOx53/29j67clqEmxRuwOcljXl/xE_6t4Zt8.js"))
+const container = document.getElementById("main") let routeId, pathVariables,
+shouldHydrate = false if ("framerHydrateV2" in container.dataset) { const
+routeData = JSON.parse(container.dataset.framerHydrateV2) routeId =
+routeData.routeId pathVariables = routeData.pathVariables shouldHydrate = true }
+else { const routeData = Framer.inferInitialRouteFromPath(routes,
+decodeURIComponent(location.pathname)) routeId = routeData.routeId pathVariables
+= routeData.pathVariables } const route = routes[routeId] const RootComponent =
+await route.page.preload() routes[routeId].page = RootComponent const element =
+React.createElement( Framer.PageRoot, { RootComponent, isWebsite: true, routeId,
+pathVariables, routes, notFoundPage, isReducedMotion: true, includeDataObserver:
+false, } ) window.__html_time_to_render_start = performance.now() if
+(shouldHydrate) { ReactDOM.hydrateRoot(container, element) } else {
+ReactDOM.createRoot(container).render(element) }
+window.__html_time_to_render_end = performance.now() })().catch(error => {
+window.__send_framer_event &&
+window.__send_framer_event("published_site_load_error", { message:
+String(error), stack: error instanceof Error && typeof error.stack === "string"
+? error.stack : null }) throw error }) ;(async () => { const { default: Badge }
+= await import("__framer-badge") const ContainerWithStyleAppearEffect =
+Framer.withStyleAppearEffect(Framer.Container) React.startTransition(() => {
+ReactDOM.createRoot(document.getElementById("__framer-badge-container"))
+.render(React.createElement(ContainerWithStyleAppearEffect, { className:
+"__framer-badge", __framer__threshold: 0.5, __framer__animateOnce: true,
+__framer__opacity: 0, __framer__targetOpacity: 1, __framer__rotate: 0,
+__framer__x: 0, __framer__y: 10, __framer__scale: 1, __framer__transition: {
+"type": "spring", "ease": [0.44, 0, 0.56, 1], "duration": 0.3, "delay": 1,
+"stiffness": 350, "damping": 40, "mass": 1.5 }, __framer__rotateX: 0,
+__framer__rotateY: 0, __framer__perspective: 1200, },
+React.createElement(Badge))) }) })()
