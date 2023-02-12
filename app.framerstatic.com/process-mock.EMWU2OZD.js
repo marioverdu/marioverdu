@@ -1,0 +1,4 @@
+import "https://app.framerstatic.com/chunk-XVZMMKAV.js";
+var e = {};
+export { e as default };
+//# sourceMappingURL=https://app.framerstatic.com/process-mock.EMWU2OZD.js.map
