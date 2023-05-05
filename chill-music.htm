@@ -1,1 +1,19 @@
-<p>parragraph</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Redireccionamiento aleatorio</title>
+  </head>
+  <body onload="redireccionar()">
+    <script>
+      function redireccionar() {
+        var enlaces = [
+          "https://www.youtube.com/watch?v=J-xKenHuXnU&list=PLinjGYAZZR4CJVCJjoci0_JMNtTDfwFcF&index=7",
+          "https://www.youtube.com/watch?v=HFWd8k2RPI8&list=PLinjGYAZZR4CJVCJjoci0_JMNtTDfwFcF&index=8&t=2058s",
+          "https://www.youtube.com/watch?v=QVTWvOzktbE&list=PLinjGYAZZR4CJVCJjoci0_JMNtTDfwFcF&index=9&t=1597s"
+        ];
+        var enlaceAleatorio = enlaces[Math.floor(Math.random() * enlaces.length)];
+        window.location.href = enlaceAleatorio;
+      }
+    </script>
+  </body>
+</html>
