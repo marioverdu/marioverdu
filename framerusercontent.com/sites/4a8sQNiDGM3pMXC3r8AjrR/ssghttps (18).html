@@ -1,16 +1,31 @@
-import { MotionValue } from "framer"; // Basic MotionValue check
-export const isMotionValue = v => v instanceof MotionValue;
+import { useIsInCurrentNavigationTarget } from "framer";
+import { useEffect } from "react";
+export function useOnEnter(onEnter, enabled) {
+  return useOnSpecificTargetChange(true, onEnter, enabled);
+}
+export function useOnExit(onExit, enabled) {
+  return useOnSpecificTargetChange(false, onExit, enabled);
+}
+function useOnSpecificTargetChange(goal, callback, enabled = true) {
+  const isInTarget = useIsInCurrentNavigationTarget();
+  useEffect(() => {
+    if (enabled && isInTarget === goal) callback();
+  }, [isInTarget]);
+}
 export const __FramerMetadata__ = {
   "exports": {
-    "isMotionValue": {
-      "type": "variable",
+    "useOnEnter": {
+      "type": "function",
       "annotations": {
         "framerContractVersion": "1"
       }
     },
-    "__FramerMetadata__": {
-      "type": "variable"
+    "useOnExit": {
+      "type": "function",
+      "annotations": {
+        "framerContractVersion": "1"
+      }
     }
   }
 };
-//# sourceMappingURL=./isMotionValue.map
+//# sourceMappingURL=./useOnNavigationTargetChange.map
