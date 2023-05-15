@@ -1,3 +1,62 @@
-import e from"./cjs/scheduler.production.min.js";export{default}from"./cjs/scheduler.production.min.js";import"process";const t=e.unstable_now,l=e.unstable_IdlePriority,a=e.unstable_ImmediatePriority,n=e.unstable_LowPriority,r=e.unstable_NormalPriority,s=e.unstable_Profiling,u=e.unstable_UserBlockingPriority,i=e.unstable_cancelCallback,o=e.unstable_continueExecution,b=e.unstable_forceFrameRate,c=e.unstable_getCurrentPriorityLevel,_=e.unstable_getFirstCallbackNode,d=e.unstable_next,m=e.unstable_pauseExecution,p=e.unstable_requestPaint,P=e.unstable_runWithPriority,y=e.unstable_scheduleCallback,f=e.unstable_shouldYield,h=e.unstable_wrapCallback;export{l as unstable_IdlePriority,a as unstable_ImmediatePriority,n as unstable_LowPriority,r as unstable_NormalPriority,s as unstable_Profiling,u as unstable_UserBlockingPriority,i as unstable_cancelCallback,o as unstable_continueExecution,b as unstable_forceFrameRate,c as unstable_getCurrentPriorityLevel,_ as unstable_getFirstCallbackNode,d as unstable_next,t as unstable_now,m as unstable_pauseExecution,p as unstable_requestPaint,P as unstable_runWithPriority,y as unstable_scheduleCallback,f as unstable_shouldYield,h as unstable_wrapCallback};
-
-//# sourceMappingURL=index.js.map
+import { jsx as _jsx } from "react/jsx-runtime";
+export function openFramerWithUtmTags(Component) {
+  return props => {
+    return /*#__PURE__*/_jsx(Component, {
+      ...props,
+      onClick: e => {
+        var ref;
+        e.preventDefault();
+        window.open(`https://framer.com/r/badge/?utm_campaign=freeplanbadge&utm_source=${encodeURIComponent(window === null || window === void 0 ? void 0 : (ref = window.location) === null || ref === void 0 ? void 0 : ref.origin)}`);
+      },
+      style: {
+        ...props.style,
+        cursor: "pointer"
+      }
+    });
+  };
+}
+export function openFramerWithUtmTagsA(Component) {
+  return props => {
+    return /*#__PURE__*/_jsx("a", {
+      href: `https://framer.com/`,
+      title: "Custom website builder for designers, agencies and startups." // This is needed for SEO
+      ,
+      children: /*#__PURE__*/_jsx(Component, {
+        ...props,
+        onClick: e => {
+          var ref;
+          e.preventDefault();
+          window.open(
+          // This is the link that will actually open (it executes JavaScript first)
+          `https://framer.com/r/badge/?utm_campaign=freeplanbadge&utm_source=${encodeURIComponent(window === null || window === void 0 ? void 0 : (ref = window.location) === null || ref === void 0 ? void 0 : ref.origin)}`);
+        },
+        style: {
+          ...props.style,
+          cursor: "pointer"
+        }
+      })
+    });
+  };
+}
+export const __FramerMetadata__ = {
+  "exports": {
+    "openFramerWithUtmTags": {
+      "type": "reactHoc",
+      "name": "openFramerWithUtmTags",
+      "annotations": {
+        "framerContractVersion": "1"
+      }
+    },
+    "openFramerWithUtmTagsA": {
+      "type": "reactHoc",
+      "name": "openFramerWithUtmTagsA",
+      "annotations": {
+        "framerContractVersion": "1"
+      }
+    },
+    "__FramerMetadata__": {
+      "type": "variable"
+    }
+  }
+};
+//# sourceMappingURL=./Click.map
